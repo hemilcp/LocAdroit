@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LocAdroit</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pick_location">PickLocationActivity</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_satellite">Satellite</string>
+    <string name="addremitext">Add New reminder</string>
+    <string name="addsystext">Add System Task</string>
+    <string name="addmulusertext">Add Multi-User Task</string>
+    <string name="title_activity_add_reminder">AddReminderActivity</string>
+    <string name="maps">Add new Location</string>
+    <string name="favs">Choose from Favourites</string>
+    <string name="title">Enter Title</string>
+    <string name="note">Write a Note</string>
+    <string name="location">Specify a Location</string>
+    <string name="done">Save</string>
+    <string name="occ_label">Occurrence</string>
+    <string name="radio_once">Once</string>
+    <string name="radio_everyday">Everyday</string>
+    <string name="date_label">Date</string>
+    <string name="title_activity_add_ons_fragment">AddOnsFragment</string>
+    <string name="title_activity_select_fav">SelectFavActivity</string>
+    <string name="title_activity_details_remi">RemiDetails</string>
+    <string name="font">Roboto Condensed Light</string>
+    <string name="remiDetails">Reminder</string>
+    <string name="remiDetailsTitle">Title</string>
+    <string name="remiDetailsNote">Note</string>
+    <string name="remiDetailsLoc">Location</string>
+    <string name="delButtonText">Delete</string>
+    <string name="change">Change</string>
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="title_activity_task_battery">TaskBatteryActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_task_sound">TaskSoundActivity</string>
+    <string name="title_activity_task_wi_fi">TaskWiFiActivity</string>
+    <string name="title_activity_task_wall_paper">TaskWallPaperActivity</string>
+    <string name="title_activity_sys_task_fragment">SysTaskFragment</string>
+    <string name="title_activity_sysdetails">SysdetailsActivity</string>
+    <string name="title_activity_add_multiuser_task">Add Multi-user Task</string>
+    <string name="userLabel">Select User</string>
+    <string name="type_email">E-mail</string>
+    <string name="title_activity_muluser_details">MultiUser Event Details</string>
+    <string name="notification_activity">Notification</string>
+	
+</resources>

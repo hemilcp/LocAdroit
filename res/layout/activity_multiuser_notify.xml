@@ -1,0 +1,106 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MultiUserNotifyActivity" >
+	
+    <TextView android:id="@+id/eventInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Following user wants to add notification when you reach at the given location"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+    
+      <TextView android:id="@+id/emaillabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventInfo"
+        android:text="E-mail"
+        android:textStyle="bold"
+        android:paddingTop="20sp"
+        />
+            
+    <TextView android:id="@+id/emailtext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emaillabel1"
+        android:text="someone@example.com"
+        android:padding="15sp"
+         />
+    <TextView android:id="@+id/addrlabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location_Address"
+        android:layout_below="@id/emailtext1"
+        android:textStyle="bold"
+        />
+            
+    <TextView android:id="@+id/addrtext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addrlabel1"
+        android:text="some address"
+        android:padding="15sp"
+         />
+    
+    <TextView android:id="@+id/datelabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_below="@id/addrtext1"
+        android:textStyle="bold"
+        />
+            
+    <TextView android:id="@+id/datetext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datelabel1"
+        android:text="1/1/2013"
+        android:padding="15sp"
+         />
+    
+  	<TextView android:id="@+id/permit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/datetext1"
+        android:text="Allow the Event?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="15sp"
+         />
+        
+    <Button android:id="@+id/okButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Yes"
+        android:layout_below="@id/permit"
+        android:background="#222222"
+        android:textColor="#ffffff"
+        android:onClick="onPermitClick"
+         />
+    
+    <Button android:id="@+id/cancelButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:text="No"
+        android:layout_below="@id/okButton1"
+        android:background="#222222"
+        android:textColor="#ffffff"
+        android:onClick="onPermitClick"
+         />
+       
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.locationassistant"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.example.googlemaps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.googlemaps.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" ></uses-permission>
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" ></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" ></uses-permission>    
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" > </uses-permission>
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" >   </uses-permission>
+    <!-- 
+    <uses-permission android:name="android.permission.READ_CONTACTS" >   </uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <permission android:name="com.example.locationassistant.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.example.locationassistant.permission.C2D_MESSAGE" />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCP9jx7zY43q1Nx2gwtN-D7Y8sQKjNN4t0" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+
+        <activity
+            android:name="com.example.locationassistant.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.PickLocationActivity"
+            android:label="@string/title_activity_pick_location" >
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.AddReminderActivity"
+            android:label="@string/title_activity_add_reminder" >
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.AddOnsFragment"
+            android:label="@string/title_activity_add_ons_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.SelectFavActivity"
+            android:label="@string/title_activity_select_fav" >
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.RemiDetailsActivity"
+            android:label="@string/title_activity_details_remi" >
+        </activity>
+        <activity
+            android:name="com.example.SysTasks.TaskSoundActivity"
+            android:label="@string/title_activity_task_sound" >
+        </activity>
+        <activity
+            android:name="com.example.SysTasks.TaskBatteryActivity"
+            android:label="@string/title_activity_task_battery" >
+        </activity>
+        <activity
+            android:name="com.example.SysTasks.TaskWiFiActivity"
+            android:label="@string/title_activity_task_wi_fi" >
+        </activity>
+        <activity
+            android:name="com.example.SysTasks.TaskWallPaperActivity"
+            android:label="@string/title_activity_task_wall_paper" >
+        </activity>
+        <activity
+            android:name="com.example.locaitonassistant.SysTaskFragment"
+            android:label="@string/title_activity_sys_task_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.locationassistant.SysdetailsActivity"
+            android:label="@string/title_activity_sysdetails" >
+        </activity>
+        <activity
+            android:name="com.example.MultiUserPack.AddMultiuserTaskActivity"
+            android:label="@string/title_activity_add_multiuser_task">
+        </activity>
+        <activity
+            android:name="com.example.MultiUserPack.MulUserDetailsActivity"
+            android:label="@string/title_activity_muluser_details">
+        </activity>
+        <activity
+            android:name="com.example.MultiUserPack.MultiUserNotifyActivity"
+            android:label="@string/notification_activity">
+        </activity>
+
+        <service
+            android:name="com.example.locationassistant.LocationService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name="com.example.locationassistant.LocationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="LOCATION_REACHED" ></action>
+                <action android:name="LOCATION_LEFT" ></action>
+                <action android:name="DATABASE_MODIFIED" ></action>
+                <action android:name="android.intent.action.DATE_CHANGED"></action>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"></action>
+            </intent-filter>
+        </receiver>
+		<receiver 
+		    android:name=".GcmBroadcastReceiver" 
+		    android:exported="true"
+			android:permission="com.google.android.c2dm.permission.SEND" >
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="com.example.locationassistant" />
+			</intent-filter>
+		</receiver>
+    </application>
+</manifest>

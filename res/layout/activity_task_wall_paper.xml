@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TaskWallPaperActivity" >
+
+  <Button 
+      android:id="@+id/wallp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Click To select Wallpaper"
+      android:onClick="chooseWallp"
+      />
+  <ImageView 
+   				    android:id="@+id/img"
+   				    android:layout_width="80sp"
+   				    android:layout_height="80sp"
+   				    android:layout_below="@id/wallp"
+   				    android:layout_marginLeft="30dp"
+   				    android:visibility="gone"   				    
+   				    ></ImageView>
+  <TextView 
+			        android:id="@+id/mode_in"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_below="@id/img"
+			        android:layout_marginLeft="30dp"
+			        android:text="mode"
+			        android:textColor="#000"
+			        android:visibility="gone"
+			        />
+    <TextView 
+       android:id="@+id/wallp_loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mode_in"
+        android:layout_marginTop="7dp"
+        android:text=" Choose Location "
+          android:textStyle="bold"
+       />
+   <RadioGroup
+       android:id="@+id/wallp_loc_group"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/wallp_loc">
+       <RadioButton 
+           android:id="@+id/choosefav"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Choose from Favourites"
+           android:onClick="selectLocation"/>
+       <RadioButton 
+           android:id="@+id/addnew"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Add New Location"
+           android:onClick="selectLocation"/>
+   </RadioGroup>
+   
+   <TextView 
+       android:id="@+id/wallp_new_loc"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       android:layout_marginLeft="20sp"
+       android:layout_below="@id/wallp_loc_group"
+       />
+   
+   <Button  
+       	android:id="@+id/wallp_loc_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wallp_loc_group"
+        android:layout_marginLeft="200dp"
+        android:layout_alignTop="@id/wallp_loc"
+        android:text="change"
+        android:gravity="center"
+        android:onClick="locChangeBut"
+        android:visibility="gone"
+       />
+    <TextView 
+       android:id="@+id/wallp_when"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wallp_new_loc"
+        android:layout_toEndOf="@id/wallp_loc_change"
+        android:text=" Change Apply When "
+          android:textStyle="bold"
+       />
+   <RadioGroup
+       android:id="@+id/wallp_when_group"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/wallp_when"
+       android:orientation="horizontal">"
+       <RadioButton 
+           android:id="@+id/entering"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Entering "
+           android:onClick="selectWhen"/>
+       <RadioButton 
+           android:id="@+id/exiting"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Exiting"
+           android:onClick="selectWhen"/>
+   </RadioGroup>   
+  
+     <Button
+       android:id="@+id/save"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/wallp_when_group"
+       android:layout_marginTop="15sp"
+       android:text="Save"
+       android:padding="5sp"
+       android:onClick="saveTask"
+       android:background="#222"
+       android:textColor="#fff"
+       />
+   
+</RelativeLayout>

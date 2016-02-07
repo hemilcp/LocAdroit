@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical" >   
+
+   
+	    <Button 
+	        android:id="@+id/addremitext"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:layout_marginTop="45dp"
+	        android:text="@string/addremitext"
+	        android:textSize="20sp"
+	        android:gravity="center"
+	        android:clickable="true"
+	        android:textColor="#ffffff"
+	        android:background="#333388"
+	        />
+	
+	    <Button 
+	        android:id="@+id/addsystext"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:layout_marginTop="135dp"
+	        android:text="@string/addsystext"
+	        android:textSize="20sp"
+	        android:gravity="center"
+	        android:textColor="#ffffff"
+	        android:background="#009900"
+	         />
+	
+    
+		    <Button
+	        android:id="@+id/addmulusertext"
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:layout_marginTop="225dp"
+	        android:text="@string/addmulusertext"
+	        android:textSize="20sp"
+	        android:textColor="#ffffff"
+	        android:background="#cc1100"
+	        android:gravity="center"
+	        />
+    
+     
+</RelativeLayout>
